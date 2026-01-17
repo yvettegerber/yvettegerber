@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>I watch you watch the world</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 30px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    /* === Two-column layout === */
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    .image-column img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 40px;
+    }
+
+    .text-column p {
+      margin-bottom: 22px;
+    }
+
+    /* === Responsive fallback === */
+    @media (max-width: 900px) {
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>I watch you watch the world</h1>
+
+    <div class="two-column">
+
+      <!-- LEFT: Images -->
+      <div class="image-column">
+        <img src="movies/watch2.png" alt="Psycho-Subjective Image 1">
+      
+      </div>
+
+      <!-- RIGHT: Text -->
+      <div class="text-column">
+
+        <p>
+We went to Mercury Theater to watch La Bayadère <br>
+dripping Swans <br>
+I like their long slender necks and their symmetry <br>
+Twisting sapphires and pale spinning jewels <br>
+Choreography of incandescence <br>
+is mirrored by stares of luminescence <br>
+I’m hypnotized through your eyes, my sweet, as I watch you watch the show 
+    
+    </p>
+
+        
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
