@@ -480,6 +480,23 @@ table tr td {
 }
 
 
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline; /* aligns script fonts nicely */
+  gap: 12px;
+}
+
+.project-title {
+  margin: 0;
+}
+
+.project-date {
+  font-size: 0.9em;
+  color: #555;
+  white-space: nowrap;
+}
+
 
 
 
