@@ -492,10 +492,16 @@ table tr td {
 }
 
 .project-date {
-  font-size: 0.9em;
-  color: #555;
+  font-family: "Edwardian Script ITC", cursive;
+  font-weight: bold;
+  font-size: 120%;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
   white-space: nowrap;
 }
+
+
 
 
 
