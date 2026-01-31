@@ -1,27 +1,37 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 
 <head>
   <title>Yvie</title>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600|Source+Code+Pro"
-    rel="stylesheet" /> 
-  <!--[if lte IE 8]><script src="js/html5shiv.js" type="text/javascript"></script><![endif]-->
-  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-  <script src="js/jquery.dropotron.min.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <script src="js/skel.min.js">
-    {
-      prefix: 'css/style',
+  <!-- Load fonts over HTTPS (prevents mixed-content blocking in Chrome) -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600|Source+Code+Pro"
+        rel="stylesheet" />
+
+  <!--[if lte IE 8]><script src="js/html5shiv.js" type="text/javascript"></script><![endif]-->
+
+  <!-- Load jQuery over HTTPS (prevents mixed-content blocking in Chrome) -->
+  <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="js/jquery.dropotron.min.js"></script>
+  <script src="js/skel.min.js"></script>
+
+  <!-- skel configuration must be in its own script block -->
+  <script>
+    if (typeof skel !== "undefined" && skel && typeof skel.init === "function") {
+      skel.init({
+        prefix: 'css/style',
         preloadStyleSheets: true,
-          resetCSS: true,
-            boxModel: 'border',
-              grid: { gutters: 30 },
-      breakpoints: {
-        wide: { range: '1200-', containers: 1140, grid: { gutters: 50 } },
-        narrow: { range: '481-1199', containers: 960 },
-        mobile: { range: '-480', containers: 'fluid', lockViewport: true, grid: { collapse: true } }
-      }
+        resetCSS: true,
+        boxModel: 'border',
+        grid: { gutters: 30 },
+        breakpoints: {
+          wide: { range: '1200-', containers: 1140, grid: { gutters: 50 } },
+          narrow: { range: '481-1199', containers: 960 },
+          mobile: { range: '-480', containers: 'fluid', lockViewport: true, grid: { collapse: true } }
+        }
+      });
     }
   </script>
 
@@ -41,7 +51,7 @@
       // Create the dropdown base
       $("<select />").appendTo("nav");
 
-      // Create default option "Go to..."
+      // Create default option "Menu"
       $("<option />", {
         "selected": "selected",
         "value": "",
@@ -73,10 +83,10 @@
       <div id="header" class="row">
         <div class="4u">
           <div class="wrapper">
-            <h1><a href="index.html">Archive&nbsp;<span class="header_colour"> </span></a></h1>
+            <h1><a href="index.html">Archive&nbsp;<span class="header_colour"></span></a></h1>
             <!-- <h2>Simple. Contemporary. Website Template.</h2> -->
           </div>
-        </div> 
+        </div>
 
         <nav id="main-nav" class="8u">
           <ul>
@@ -91,184 +101,93 @@
 
   <div id="site_content">
     <div class="container">
-
-      <!-- Projects (single column) -->
       <div class="row">
         <section class="12u">
           <h1>Poems</h1>
 
           <div class="project-list">
 
+            <!-- California -->
+            <div class="project-item">
+              <div class="project-thumb">
+                <img src="images/california.png" alt="California preview" />
+              </div>
 
+              <div class="project-info">
+                <div class="project-header">
+                  <h3 class="project-title">
+                    <a href="california.html" rel="noopener noreferrer">California</a>
+                  </h3>
+                  <span class="project-date">8.16.2024</span>
+                </div>
+                <p class="project-caption"></p>
+              </div>
+            </div>
 
+            <!-- Halloween in July -->
+            <div class="project-item">
+              <div class="project-thumb">
+                <img src="images/halloween2.png" alt="Halloween in July preview" />
+              </div>
 
+              <div class="project-info">
+                <div class="project-header">
+                  <h3 class="project-title">
+                    <a href="halloween.html" rel="noopener noreferrer">Halloween in july</a>
+                  </h3>
+                  <span class="project-date">7.14.2023</span>
+                </div>
+                <p class="project-caption"></p>
+              </div>
+            </div>
 
+            <!-- Watch -->
+            <div class="project-item">
+              <div class="project-thumb">
+                <img src="images/watch5.png" alt="I watch you watch the world preview" />
+              </div>
 
+              <div class="project-info">
+                <div class="project-header">
+                  <h3 class="project-title">
+                    <a href="watch.html" rel="noopener noreferrer">I watch you watch the world</a>
+                  </h3>
+                  <span class="project-date">5.25.2023</span>
+                </div>
+                <p class="project-caption"></p>
+              </div>
+            </div>
 
+            <!-- Untitled -->
+            <div class="project-item">
+              <div class="project-thumb">
+                <img src="images/5untitled.png" alt="Untitled preview" />
+              </div>
 
+              <div class="project-info">
+                <div class="project-header">
+                  <h3 class="project-title">
+                    <a href="untitled.html" rel="noopener noreferrer">Untitled</a>
+                  </h3>
+                  <span class="project-date">11.23.2022</span>
+                </div>
+                <p class="project-caption"></p>
+              </div>
+            </div>
 
-
-          
-
-            
-
-<!-- California -->
-          <div class="project-item">
-  <div class="project-thumb">
-    <img src="images/california.png" alt="Module 2 preview" />
-  </div>
-
-  <div class="project-info">
-
-    <!-- Title + Date row -->
-    <div class="project-header">
-      <h3 class="project-title">
-        <a href="california.html" rel="noopener noreferrer">
-California        </a>
-      </h3>
-
-      <span class="project-date">8.16.2024</span>
-    </div>
-
-    <p class="project-caption">
-    </p>
-
-  </div>
-</div>
-
-            
-
-
-        
-
-<!-- halloween in july -->
-          <div class="project-item">
-  <div class="project-thumb">
-    <img src="images/halloween2.png" alt="Module 2 preview" />
-  </div>
-
-  <div class="project-info">
-
-    <!-- Title + Date row -->
-    <div class="project-header">
-      <h3 class="project-title">
-        <a href="halloween.html" rel="noopener noreferrer">
-Halloween in july        </a>
-      </h3>
-
-      <span class="project-date">7.14.2023</span>
-    </div>
-
-    <p class="project-caption">
-    </p>
-
-  </div>
-</div>
-
-
-
-
-<!-- watch -->
-          <div class="project-item">
-  <div class="project-thumb">
-    <img src="images/watch5.png" alt="Module 2 preview" />
-  </div>
-
-  <div class="project-info">
-
-    <!-- Title + Date row -->
-    <div class="project-header">
-      <h3 class="project-title">
-        <a href="watch.html" rel="noopener noreferrer">
-I watch you watch the world        </a>
-      </h3>
-
-      <span class="project-date">5.25.2023</span>
-    </div>
-
-    <p class="project-caption">
-    </p>
-
-  </div>
-</div>
-
-            
-
-
-            
-
-
-<!-- untitled -->
-          <div class="project-item">
-  <div class="project-thumb">
-    <img src="images/5untitled.png" alt="Module 2 preview" />
-  </div>
-
-  <div class="project-info">
-
-    <!-- Title + Date row -->
-    <div class="project-header">
-      <h3 class="project-title">
-        <a href="untitled.html" rel="noopener noreferrer">
-Untitled        </a>
-      </h3>
-
-      <span class="project-date">11.23.2022</span>
-    </div>
-
-    <p class="project-caption">
-    </p>
-
-  </div>
-</div>
-
-            
-
-            
-
-
-
-            
           </div>
         </section>
       </div>
-
     </div>
   </div>
 
   <div class="footer-wrapper">
     <div class="container">
-      <!-- Footer -->
       <footer>
-        <p>design from
-            css3templates.co.uk</a></p>
+        <p>design from <a href="https://www.css3templates.co.uk">css3templates.co.uk</a></p>
       </footer>
     </div>
   </div>
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
