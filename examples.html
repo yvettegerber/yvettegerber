@@ -1,27 +1,38 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 
 <head>
   <title>Yvie</title>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600|Source+Code+Pro"
-    rel="stylesheet" />
-  <!--[if lte IE 8]><script src="js/html5shiv.js" type="text/javascript"></script><![endif]-->
-  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-  <script src="js/jquery.dropotron.min.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <script src="js/skel.min.js"> 
-    {
-      prefix: 'css/style',
+  <!-- Load fonts over HTTPS (prevents mixed-content blocking in Chrome) -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600|Source+Code+Pro"
+        rel="stylesheet" />
+
+  <!--[if lte IE 8]><script src="js/html5shiv.js" type="text/javascript"></script><![endif]-->
+
+  <!-- Load jQuery over HTTPS (prevents mixed-content blocking in Chrome) -->
+  <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+  <script src="js/jquery.dropotron.min.js"></script>
+  <script src="js/skel.min.js"></script>
+
+  <!-- skel configuration must be in its own script block (NOT inside the script tag that has src="...") -->
+  <script>
+    if (typeof skel !== "undefined" && skel && typeof skel.init === "function") {
+      skel.init({
+        prefix: 'css/style',
         preloadStyleSheets: true,
-          resetCSS: true,
-            boxModel: 'border',
-              grid: { gutters: 30 },
-      breakpoints: {
-        wide: { range: '1200-', containers: 1140, grid: { gutters: 50 } },
-        narrow: { range: '481-1199', containers: 960 },
-        mobile: { range: '-480', containers: 'fluid', lockViewport: true, grid: { collapse: true } }
-      }
+        resetCSS: true,
+        boxModel: 'border',
+        grid: { gutters: 30 },
+        breakpoints: {
+          wide: { range: '1200-', containers: 1140, grid: { gutters: 50 } },
+          narrow: { range: '481-1199', containers: 960 },
+          mobile: { range: '-480', containers: 'fluid', lockViewport: true, grid: { collapse: true } }
+        }
+      });
     }
   </script>
 
@@ -41,7 +52,7 @@
       // Create the dropdown base
       $("<select />").appendTo("nav");
 
-      // Create default option "Go to..."
+      // Create default option "Menu"
       $("<option />", {
         "selected": "selected",
         "value": "",
@@ -73,7 +84,7 @@
       <div id="header" class="row">
         <div class="4u">
           <div class="wrapper">
-            <h1><a href="index.html">Archive&nbsp;<span class="header_colour"> </span></a></h1>
+            <h1><a href="index.html">Archive&nbsp;<span class="header_colour"></span></a></h1>
             <!-- <h2>Simple. Contemporary. Website Template.</h2> -->
           </div>
         </div>
@@ -99,194 +110,146 @@
 
           <div class="project-list">
 
+            <!-- Project 1 -->
+            <div class="project-item">
+              <div class="project-thumb">
+                <img src="images/fso.png" alt="Module 2 preview" />
+              </div>
 
- 
-  <!-- Project 1 -->
-          <div class="project-item">
-  <div class="project-thumb">
-    <img src="images/fso.png" alt="Module 2 preview" />
-  </div>
+              <div class="project-info">
+                <div class="project-header">
+                  <h3 class="project-title">
+                    <a href="docs/module2.pdf" rel="noopener noreferrer">
+                      Synesthesia &amp; FSO: Using frequency encoding to visually represent and communicate audio
+                    </a>
+                  </h3>
+                  <span class="project-date">10.29.2025</span>
+                </div>
 
-  <div class="project-info">
+                <p class="project-caption">
+                  An intuitive, invertible function that maps the characteristics of an audio file into a visual image.
+                  The encoded image transmits the audio via free space optical communication, the captured visual is decoded,
+                  and the reconstructed audio is played.
+                </p>
+              </div>
+            </div>
 
-    <!-- Title + Date row -->
-    <div class="project-header">
-      <h3 class="project-title">
-        <a href="docs/module2.pdf" rel="noopener noreferrer">
-Synesthesia & FSO: Using frequency encoding to visually represent and communicate audio        </a>
-      </h3>
-
-      <span class="project-date">10.29.2025</span>
-    </div>
-
-    <p class="project-caption">
-                  An intuitive, invertible function that maps the characteristics of an audio file into a visual image. The encoded image transmits the audio via free space optical communication, the captured visual is decoded, and the reconstructed audio is played. 
-    </p>
-
-  </div>
-</div>
-
-            
             <!-- Project 2 -->
-          <div class="project-item">
-  <div class="project-thumb">
-    <img src="images/module1.png" alt="Module 1 preview" />
-  </div>
+            <div class="project-item">
+              <div class="project-thumb">
+                <img src="images/module1.png" alt="Module 1 preview" />
+              </div>
 
-  <div class="project-info">
+              <div class="project-info">
+                <div class="project-header">
+                  <h3 class="project-title">
+                    <a href="docs/module1.pdf" rel="noopener noreferrer">
+                      Speech Recognition Calculator
+                    </a>
+                  </h3>
+                  <span class="project-date">9.23.2025</span>
+                </div>
 
-    <!-- Title + Date row -->
-    <div class="project-header">
-      <h3 class="project-title">
-        <a href="docs/module1.pdf" rel="noopener noreferrer">
-          Speech Recognition Calculator
-        </a>
-      </h3>
+                <p class="project-caption">
+                  A speech recognition algorithm designed as a spoken calculator by leveraging time and frequency domain analysis and mathematical grammar.
+                </p>
+              </div>
+            </div>
 
-      <span class="project-date">9.23.2025</span>
-    </div>
+            <!-- Project 3 -->
+            <div class="project-item">
+              <div class="project-thumb">
+                <img src="images/preciouslife.png" alt="Precious Life preview" />
+              </div>
 
-    <p class="project-caption">
-      A speech recognition algorithm designed as a spoken calculator by leveraging time and frequency domain analysis and mathematical grammar.
-    </p>
+              <div class="project-info">
+                <div class="project-header">
+                  <h3 class="project-title">
+                    <a href="docs/preciouslife.pdf" rel="noopener noreferrer">
+                      Precious Life
+                    </a>
+                  </h3>
+                  <span class="project-date">4.11.2024</span>
+                </div>
 
-  </div>
-</div>
+                <p class="project-caption">
+                  An essay exploring the primitive desire to learn and the philosophical structures that hold education in society,
+                  inspired by my experience within the alternative model of education I experienced in the Johnston Center for Integrative Studies.
+                </p>
+              </div>
+            </div>
 
+            <!-- Project 4 -->
+            <div class="project-item">
+              <div class="project-thumb">
+                <img src="images/psychosubjective.png" alt="Psycho-Subjective Image preview" />
+              </div>
 
+              <div class="project-info">
+                <div class="project-header">
+                  <h3 class="project-title">
+                    <a href="psychosubjective.html" rel="noopener noreferrer">
+                      Psycho-Subjective Image
+                    </a>
+                  </h3>
+                  <span class="project-date">11.30.2023</span>
+                </div>
 
+                <p class="project-caption">
+                  A conceptual critique of objectivity and subjectivity in modern medicine in the medium of a print created using a method of photo emulsion printmaking.
+                  A final project for a Medical Imaging course. I edited and printed the photo of myself as a self-portrait.
+                </p>
+              </div>
+            </div>
 
-   <!-- Project 3 -->
-          <div class="project-item">
-  <div class="project-thumb">
-    <img src="images/preciouslife.png" alt="Module 1 preview" />
-  </div>
+            <!-- Project 5 -->
+            <div class="project-item">
+              <div class="project-thumb">
+                <img src="images/time.png" alt="Time is a landscape preview" />
+              </div>
 
-  <div class="project-info">
+              <div class="project-info">
+                <div class="project-header">
+                  <h3 class="project-title">
+                    <a href="time.html" rel="noopener noreferrer">
+                      Time is a landscape
+                    </a>
+                  </h3>
+                  <span class="project-date">10.7.2023</span>
+                </div>
 
-    <!-- Title + Date row -->
-    <div class="project-header">
-      <h3 class="project-title">
-        <a href="docs/preciouslife.pdf" rel="noopener noreferrer">
-          Precious Life
-        </a>
-      </h3>
+                <p class="project-caption">
+                  A multi-medium alter to time inspired by physics theories on the dimensions and form of time. A poem, a map, and a print.
+                  The map shows beauty of physical changes of a riverbed over time, and was made using ArcGIS to transform DEMs along the Red River in Oklahoma
+                  into a Relative Elevation Model by developing a river centerline, applying inverse distance weighted interpolation to compute height above river surfaces,
+                  and running raster calculations. I used a wooden block printing method to create the print.
+                </p>
+              </div>
+            </div>
 
-      <span class="project-date">4.11.2024</span>
-    </div>
+            <!-- Project 6 -->
+            <div class="project-item">
+              <div class="project-thumb">
+                <img src="images/capstone.png" alt="Social-technical Power Relations preview" />
+              </div>
 
-    <p class="project-caption">
-       An essay exploring the primitive desire to learn and the philosophical structures that hold education in society, inspired by my experience within the alternative model of education I experienced in the Johnston Center for Integrative Studies. 
-    </p>
+              <div class="project-info">
+                <div class="project-header">
+                  <h3 class="project-title">
+                    <a href="docs/capstone.pdf" rel="noopener noreferrer">
+                      Social-technical Power Relations
+                    </a>
+                  </h3>
+                  <span class="project-date">4.19.2023</span>
+                </div>
 
-  </div>
-</div>
+                <p class="project-caption">
+                  My sociology capstone paper investigates the duality that technology provides in both enabling freedom in a digital dimension and the ability to collectivize,
+                  alter the narrative of truth, and fight for freedom in a physical dimension.
+                </p>
+              </div>
+            </div>
 
-
-
-
-
-<!-- Project 4 -->
-          <div class="project-item">
-  <div class="project-thumb">
-    <img src="images/psychosubjective.png" alt="Module 1 preview" />
-  </div>
-
-  <div class="project-info">
-
-    <!-- Title + Date row -->
-    <div class="project-header">
-      <h3 class="project-title">
-        <a href="psychosubjective.html" rel="noopener noreferrer">
-        Psycho-Subjective Image
-        </a>
-      </h3>
-
-      <span class="project-date">11.30.2023</span>
-    </div>
-
-    <p class="project-caption">
-      A conceptual critique of objectivity and subjectivity in modern medicine in the medium of a print created using a method of photo emulsion printmaking. A final project for a Medical Imaging course. I edited and printed the photo of myself as a self-portrait.
-    </p>
-
-  </div>
-</div>
-            
-
-
-
-
-            
-<!-- Project 5 -->
-          <div class="project-item">
-  <div class="project-thumb">
-    <img src="images/time.png" alt="Module 1 preview" />
-  </div>
-
-  <div class="project-info">
-
-    <!-- Title + Date row -->
-    <div class="project-header">
-      <h3 class="project-title">
-        <a href="time.html" rel="noopener noreferrer">
-        Time is a landscape
-        </a>
-      </h3>
-
-      <span class="project-date">10.7.2023</span>
-    </div>
-
-    <p class="project-caption">
-      A multi-medium alter to time inspired by physics theories on the dimensions and form of time. A poem, a map, and a print. The map shows beauty of physical changes of a riverbed over time, and was made using ArcGIS to transform DEMs along the Red River in Oklahoma into a Relative Elevation Model by developing a river centerline, applying inverse distance weighted interpolation to compute height above river surfaces, and running raster calculations. I used a wooden block printing method to create the print.
-    </p>
-
-  </div>
-</div>
-           
-
-
-
-
-            
-<!-- Project 5 -->
-          <div class="project-item">
-  <div class="project-thumb">
-    <img src="images/capstone.png" alt="Module 1 preview" />
-  </div>
-
-  <div class="project-info">
-
-    <!-- Title + Date row -->
-    <div class="project-header">
-      <h3 class="project-title">
-        <a href="docs/capstone.pdf" rel="noopener noreferrer">
-          Social-technical Power Relations
-        </a>
-      </h3>
-
-      <span class="project-date">4.19.2023</span>
-    </div>
-
-    <p class="project-caption">
-                  My sociology capstone paper investigates the duality that technology provides in both enabling freedom in a digital dimension and the ability to collectivize, alter the narrative of truth, and fight for freedom in a physical dimension.
-    </p>
-
-  </div>
-</div>
-
-
-
-            
-
-      
-
-
-      
-            
-
-
-
-            
           </div>
         </section>
       </div>
@@ -298,38 +261,10 @@ Synesthesia & FSO: Using frequency encoding to visually represent and communicat
     <div class="container">
       <!-- Footer -->
       <footer>
-        <p>design from
-            css3templates.co.uk</a></p>
+        <p>design from <a href="https://www.css3templates.co.uk">css3templates.co.uk</a></p>
       </footer>
     </div>
   </div>
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
