@@ -33,12 +33,13 @@
       align-items: start;
     }
 
-    .image-column img {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin-bottom: 40px;
-    }
+    .image-column img,
+.image-column video {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 40px;
+}
 
     .text-column p {
       margin-bottom: 22px;
@@ -63,10 +64,21 @@
 
       <!-- LEFT: Images -->
       <div class="image-column">
-        <img src="movies/cali1.mov" alt="Psycho-Subjective Image 1">
-        <img src="movies/cali2.mov" alt="Psycho-Subjective Image 2">
-        <img src="movies/cali8.mov" alt="Psycho-Subjective Image 2">
-      </div>
+  <video autoplay muted loop playsinline>
+    <source src="movies/californiaaEX.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+<video autoplay muted loop playsinline>
+    <source src="movies/californiabEX.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+        <video autoplay muted loop playsinline>
+    <source src="movies/californiacEX.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+        
+</div>
 
       <!-- RIGHT: Text -->
       <div class="text-column">
