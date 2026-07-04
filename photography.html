@@ -1,27 +1,222 @@
-<div class="photo-gallery">
+<!DOCTYPE HTML>
+<html lang="en">
 
-    <a href="images/photo1.jpg">
-        <img src="images/photo1.jpg" alt="">
-    </a>
+<head>
+    <title>Yvie</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <a href="images/photo2.jpg">
-        <img src="images/photo2.jpg" alt="">
-    </a>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600|Source+Code+Pro"
+        rel="stylesheet" />
 
-    <a href="images/photo3.jpg">
-        <img src="images/photo3.jpg" alt="">
-    </a>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="js/jquery.dropotron.min.js"></script>
+    <script src="js/skel.min.js"></script>
 
-    <a href="images/photo4.jpg">
-        <img src="images/photo4.jpg" alt="">
-    </a>
+    <!-- Skel -->
+    <script>
+        if (typeof skel !== "undefined" && skel && typeof skel.init === "function") {
+            skel.init({
+                prefix: 'css/style',
+                preloadStyleSheets: true,
+                resetCSS: true,
+                boxModel: 'border',
+                grid: { gutters: 30 },
+                breakpoints: {
+                    wide: { range: '1200-', containers: 1140, grid: { gutters: 50 } },
+                    narrow: { range: '481-1199', containers: 960 },
+                    mobile: { range: '-480', containers: 'fluid', lockViewport: true, grid: { collapse: true } }
+                }
+            });
+        }
+    </script>
 
-    <a href="images/photo5.jpg">
-        <img src="images/photo5.jpg" alt="">
-    </a>
+    <script>
+        $(function () {
+            $('#main-nav > ul').dropotron({
+                offsetY: -10
+            });
+        });
+    </script>
 
-    <a href="images/photo6.jpg">
-        <img src="images/photo6.jpg" alt="">
-    </a>
+    <script>
+        $(function () {
 
-</div>
+            $("<select />").appendTo("nav");
+
+            $("<option />", {
+                selected: "selected",
+                value: "",
+                text: "Menu"
+            }).appendTo("nav select");
+
+            $("nav a").each(function () {
+                var el = $(this);
+
+                $("<option />", {
+                    value: el.attr("href"),
+                    text: el.text()
+                }).appendTo("nav select");
+            });
+
+            $("nav select").change(function () {
+                window.location = $(this).find("option:selected").val();
+            });
+
+        });
+    </script>
+
+    <style>
+        body {
+            background: #1f1f1f;
+        }
+
+        #site_content {
+            padding-top: 30px;
+            padding-bottom: 40px;
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .photo-gallery {
+            column-count: 4;
+            column-gap: 24px;
+        }
+
+        .photo-gallery a {
+            display: block;
+            margin-bottom: 24px;
+            break-inside: avoid;
+        }
+
+        .photo-gallery img {
+            width: 100%;
+            display: block;
+            transition: transform .3s ease;
+        }
+
+        .photo-gallery img:hover {
+            transform: scale(1.03);
+        }
+
+        @media (max-width:1200px) {
+            .photo-gallery {
+                column-count: 3;
+            }
+        }
+
+        @media (max-width:800px) {
+            .photo-gallery {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width:500px) {
+            .photo-gallery {
+                column-count: 1;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="header_container">
+        <div class="container">
+
+            <div id="header" class="row">
+
+                <div class="4u">
+                    <div class="wrapper">
+                        <h1>
+                            <a href="index.html">
+                                Archive
+                                <span class="header_colour"></span>
+                            </a>
+                        </h1>
+                    </div>
+                </div>
+
+                <nav id="main-nav" class="8u">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="examples.html">Projects</a></li>
+                        <li><a class="active" href="anotherpage.html">Photography</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="site_content">
+        <div class="container">
+
+            <section>
+
+                <h1>Photography</h1>
+
+                <div class="photo-gallery">
+
+                    <a href="images/photo1.jpg">
+                        <img src="images/photo1.jpg" alt="">
+                    </a>
+
+                    <a href="images/photo2.jpg">
+                        <img src="images/photo2.jpg" alt="">
+                    </a>
+
+                    <a href="images/photo3.jpg">
+                        <img src="images/photo3.jpg" alt="">
+                    </a>
+
+                    <a href="images/photo4.jpg">
+                        <img src="images/photo4.jpg" alt="">
+                    </a>
+
+                    <a href="images/photo5.jpg">
+                        <img src="images/photo5.jpg" alt="">
+                    </a>
+
+                    <a href="images/photo6.jpg">
+                        <img src="images/photo6.jpg" alt="">
+                    </a>
+
+                    <a href="images/photo7.jpg">
+                        <img src="images/photo7.jpg" alt="">
+                    </a>
+
+                    <a href="images/photo8.jpg">
+                        <img src="images/photo8.jpg" alt="">
+                    </a>
+
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+
+    <div class="footer-wrapper">
+        <div class="container">
+            <footer>
+                <p>
+                    design from
+                    <a href="https://www.css3templates.co.uk">
+                        css3templates.co.uk
+                    </a>
+                </p>
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>
