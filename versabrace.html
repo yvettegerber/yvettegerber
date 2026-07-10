@@ -7,86 +7,84 @@
 <style>
 
 body {
-font-family: Arial, sans-serif;
-line-height: 1.6;
-margin: 0;
-padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 .container {
-    max-width: 500; /* Change this number (e.g., 600px, 650px, 700px) to control text width */
+    max-width: 500px; /* Change this number (e.g., 600px, 650px, 700px) to control text width */
     margin: 100px auto;
     padding: 0 20px;
 }
 h1 {
-margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 img {
-width: 100%;
-height: auto;
-display: block;
-margin: 30px 0;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px 0;
 }
 p {
-margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 /* --- Slideshow Styles --- */
 .slideshow-container {
-position: relative;
-width: 75%;
-margin: 40px auto;
-box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Adds a nice depth to the slides */
-background-color: #f9f9f9;
+    position: relative;
+    width: 75%;
+    margin: 40px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Adds a nice depth to the slides */
+    background-color: #f9f9f9;
 }
 .slideshow-container img {
-width: 100%;
-margin: 0; /* Override default image margin */
-display: block;
+    width: 100%;
+    margin: 0; /* Override default image margin */
+    display: block;
 }
 /* Navigation Arrows */
 .prev, .next {
-cursor: pointer;
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-width: auto;
-padding: 16px;
-color: white;
-font-weight: bold;
-font-size: 24px;
-transition: 0.3s ease;
-border-radius: 0 3px 3px 0;
-user-select: none;
-background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
-text-decoration: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+    text-decoration: none;
 }
 .next {
-right: 0;
-border-radius: 3px 0 0 3px;
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }
 .prev:hover, .next:hover {
-background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 </style>
 </head>
 <body>
 
 <div class="container">
-<h1 style="text-align: center;">Psycho-Subjective Image</h1>
-<div class="slideshow-container">
-    <img id="slide-image" src="images/slide1.PNG" alt="Slideshow presentation">
-    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-    <a class="next" onclick="changeSlide(1)">&#10095;</a>
-</div>
-
+    <h1 style="text-align: center;">Psycho-Subjective Image</h1>
+    <div class="slideshow-container">
+        <img id="slide-image" src="images/slide1.PNG" alt="Slideshow presentation">
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
 </div>
 
 <script>
-// 1. Put the paths to your exported PowerPoint slide images here:
-// 1. Put the paths to your exported PowerPoint slide images here:
+// Put the paths to your exported PowerPoint slide images here:
 const slides = [
-    "images/slide1.PNG", 
-    "images/slide2re.PNG",            
+    "images/slide1.PNG",
+    "images/slide2re.PNG",
     "images/slide3re.PNG",
     "images/slide4.PNG",
     "images/slide5.PNG",
@@ -101,7 +99,7 @@ const slideImageElement = document.getElementById('slide-image');
 function changeSlide(direction) {
     // Calculate new index
     currentIndex += direction;
-    
+
     // Loop back to the start if we go past the last slide
     if (currentIndex >= slides.length) {
         currentIndex = 0;
@@ -110,35 +108,35 @@ function changeSlide(direction) {
     if (currentIndex < 0) {
         currentIndex = slides.length - 1;
     }
-    
+
     // Update the image source
     slideImageElement.src = slides[currentIndex];
 }
 </script>
-<br><br>
-<p>
-This work was inspired by Havi Carel’s book, Illness: The Cry of the Flesh, in which she discusses a phenomenological approach to medicine. This approach “sees illness as a way of living, experiencing the world,”. For example, a phenomenological approach might recognize the modified experience of space and time for many with somatic and mental disorders, and the approach would seek to study and remedy dis-ease within perception.
-</p>
-<p>
-The concept of my piece, Psycho-Subjective Image, is a new type of medical image with roots in phenomenological medicine. A Psycho-Subjective image is a medical image produced by the individual about their subjective experience. Ideally, a branch of medicine focused on Medical Phenomenology would study the Psycho-Subjective image. Studying an individual’s depictions of their realities over time gives insight into that individual’s processing and psyche. On a meta-scale, studying medical phenomena from naturalistic and physical perspectives, along with phenomenological perspectives, would allow us to understand the nature of human-disease interactions. A bat will perceive the same disease drastically differently than a human being; a disease is an interaction, and to study the disease should mean studying the interaction in as many ways as we can.
-</p>
-<p>
-We are body and consciousness ; vital body != vital consciousness , vital consciousness != vital body ; and they both inform one another ; methods of investigation should mirror the system they’re observing. A Psycho-Subjective image explains the perceptive disease interaction, and traditional medical images give biological context to individual experience. The information in both images is entangled.
-</p>
-<p>
-By harnessing creativity, art, and symbolism, new forms of medical imaging can be used to connect intangible perception and tangible biology to more holistically study human life.
-</p>
-<p>
-It’s interesting how this idea of “being possessed” likely originated from witnessing psychosis and misunderstanding mental illness, and how possession is a conceptual metaphor for this neurological phenomenon; the chemical imbalances creates a skewed perception of reality much like a “possessive entity” might, affecting and controlling consciousness.
-</p>
-<p>
-I think this speaks to the power of symbolism & metaphors, and how humans can begin to understand or at least acknowledge phenomena by metaphorically representing the nature of that phenomena.
-</p>
-<p>
-Science is a society’s working body of knowledge, of facts. Scientific approaches have furthered human understanding of ourselves and the world immensely, and the power of traditional medical images should not be understated. Science is a “working” and ever-changing cumulation as there is so much we do not know about the world. I believe perceptive representation, especially when used in conjunction with naturalistic approaches, will connect humans more to their bodies, and will expand scientific knowledge.
-</p>
-<br><br>
 
+<div class="container">
+    <p>
+    This work was inspired by Havi Carel's book, Illness: The Cry of the Flesh, in which she discusses a phenomenological approach to medicine. This approach "sees illness as a way of living, experiencing the world,". For example, a phenomenological approach might recognize the modified experience of space and time for many with somatic and mental disorders, and the approach would seek to study and remedy dis-ease within perception.
+    </p>
+    <p>
+    The concept of my piece, Psycho-Subjective Image, is a new type of medical image with roots in phenomenological medicine. A Psycho-Subjective image is a medical image produced by the individual about their subjective experience. Ideally, a branch of medicine focused on Medical Phenomenology would study the Psycho-Subjective image. Studying an individual's depictions of their realities over time gives insight into that individual's processing and psyche. On a meta-scale, studying medical phenomena from naturalistic and physical perspectives, along with phenomenological perspectives, would allow us to understand the nature of human-disease interactions. A bat will perceive the same disease drastically differently than a human being; a disease is an interaction, and to study the disease should mean studying the interaction in as many ways as we can.
+    </p>
+    <p>
+    We are body and consciousness; vital body != vital consciousness, vital consciousness != vital body; and they both inform one another; methods of investigation should mirror the system they're observing. A Psycho-Subjective image explains the perceptive disease interaction, and traditional medical images give biological context to individual experience. The information in both images is entangled.
+    </p>
+    <p>
+    By harnessing creativity, art, and symbolism, new forms of medical imaging can be used to connect intangible perception and tangible biology to more holistically study human life.
+    </p>
+    <p>
+    It's interesting how this idea of "being possessed" likely originated from witnessing psychosis and misunderstanding mental illness, and how possession is a conceptual metaphor for this neurological phenomenon; the chemical imbalances create a skewed perception of reality much like a "possessive entity" might, affecting and controlling consciousness.
+    </p>
+    <p>
+    I think this speaks to the power of symbolism & metaphors, and how humans can begin to understand or at least acknowledge phenomena by metaphorically representing the nature of that phenomena.
+    </p>
+    <p>
+    Science is a society's working body of knowledge, of facts. Scientific approaches have furthered human understanding of ourselves and the world immensely, and the power of traditional medical images should not be understated. Science is a "working" and ever-changing cumulation as there is so much we do not know about the world. I believe perceptive representation, especially when used in conjunction with naturalistic approaches, will connect humans more to their bodies, and will expand scientific knowledge.
+    </p>
+</div>
 
 </body>
 </html>
