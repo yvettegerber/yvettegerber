@@ -115,9 +115,9 @@ ol li {
 #header_container {
 	padding-bottom: 0.5em;
 	background: #E80003 url(../images/red2.png) repeat;
-	-moz-box-shadow: rgba(0, 0, 0, 0.5)  3px 3px 5px;
-	-webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 5px;
-	box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 5px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.5)  3px 3px 3px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 3px;
+	box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 3px;
 }
  
 .wrapper {
