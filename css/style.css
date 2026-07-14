@@ -122,11 +122,12 @@ ol li {
  
 .wrapper {
 	margin-left: -3em;
-	padding: 0.5em 0.5em 1.5em 0em;
+	padding: 0.25em 0.5em 0.5em 0em;   /* was 0.5em 0.5em 1.5em 0em */
 }
 
 #header h1 a { 
   font: normal 200% 'News Cycle', arial, sans-serif;
+  line-height: 1.1;   /* add this — tightens vertical space without changing font size */
   border-bottom: 0;
   text-transform: none;
   margin: 0;
@@ -137,8 +138,9 @@ ol li {
 
 #header h2 { 
   font: normal 140% 'News Cycle', arial, sans-serif;
+  line-height: 1.1;   /* add this too */
   border-bottom: 0;
-  margin-top: -1em;
+  margin-top: -1.5em;  /* was -1em, pulls h2 closer to h1 */
   text-transform: none;
   color: #FFF;
   text-shadow: 1px 1px #000;  
