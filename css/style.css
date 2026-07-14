@@ -2,7 +2,7 @@
   font-family: Droid Sans; 
     src: url('../fonts/DroidSans-webfont.eot'); 
     src: local("Droid Sans"), url('../fonts/DroidSans-webfont.woff'); 
-} 
+}  
 
 @font-face { 
   font-family: News Cycle; 
