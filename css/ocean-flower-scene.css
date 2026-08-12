@@ -1,0 +1,41 @@
+/*
+ * Ocean/Flower animated banner scene — index.html only.
+ * Classes are prefixed "ocnfl-" to avoid colliding with the existing
+ * template CSS (style.css / style-wide.css / style-narrow.css / style-mobile.css).
+ *
+ * The container reproduces the exact box the original
+ * `#banner a img { width:100%; display:block; }` rule produced:
+ * full-width, intrinsic-ratio height (1722:794, the original image's
+ * pixel dimensions), so no layout shift versus the old image.
+ * `overflow: hidden` on #banner itself clips to its own existing
+ * border-radius (0.5em at the wide breakpoint, 0 elsewhere, set in
+ * style-wide.css/style-narrow.css/style-mobile.css) — this stylesheet
+ * only loads on index.html, so #banner on other pages is untouched.
+ */
+
+#banner {
+	overflow: hidden;
+}
+
+#banner a .ocnfl-scene {
+	display: block;
+	width: 100%;
+}
+
+.ocnfl-scene {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 1722 / 794;
+	overflow: hidden;
+	background: #0F0F17;
+}
+
+.ocnfl-canvas {
+	position: absolute;
+	inset: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	image-rendering: pixelated;
+	image-rendering: -moz-crisp-edges;
+}
