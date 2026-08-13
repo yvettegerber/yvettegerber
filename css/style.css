@@ -128,10 +128,14 @@ ol li {
 #header h1 {
 	margin: 0;
 	padding: 0;
+	font-size: 1em;
 }
 
-#header h1 a {
-  font: normal 200% 'News Cycle', arial, sans-serif;
+#header h1 a,
+#header h1 span.page-heading {
+  font-family: 'News Cycle', arial, sans-serif;
+  font-weight: normal;
+  font-size: 200%;
   line-height: 1.1;   /* add this — tightens vertical space without changing font size */
   border-bottom: 0;
   text-transform: none;
@@ -139,21 +143,11 @@ ol li {
   color: #FFF;
   text-shadow: 1px 1px #000;
   text-decoration: none;
-}
-
-#header h1.page-heading {
-  font-size: 200%;
-  line-height: 1.1;
-  border-bottom: 0;
-  text-transform: none;
-  margin: 0;
-  color: #FFF;
-  text-shadow: 1px 1px #000;
-  text-decoration: none;
+  display: inline-block;
 }
 
 #header .page-heading {
-  font-family: 'Unbounded', 'News Cycle', arial, sans-serif;
+  font-family: 'Unbounded', 'News Cycle', arial, sans-serif !important;
 }
 
 #header h2 { 
