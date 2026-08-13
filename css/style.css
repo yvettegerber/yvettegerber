@@ -125,7 +125,12 @@ ol li {
 	padding: 0.25em 0.5em 0.5em 0em;   /* was 0.5em 0.5em 1.5em 0em */
 }
 
-#header h1 a { 
+#header h1 {
+	margin: 0;
+	padding: 0;
+}
+
+#header h1 a {
   font: normal 200% 'News Cycle', arial, sans-serif;
   line-height: 1.1;   /* add this — tightens vertical space without changing font size */
   border-bottom: 0;
@@ -134,6 +139,21 @@ ol li {
   color: #FFF;
   text-shadow: 1px 1px #000;
   text-decoration: none;
+}
+
+#header h1.page-heading {
+  font-size: 200%;
+  line-height: 1.1;
+  border-bottom: 0;
+  text-transform: none;
+  margin: 0;
+  color: #FFF;
+  text-shadow: 1px 1px #000;
+  text-decoration: none;
+}
+
+#header .page-heading {
+  font-family: 'Unbounded', 'News Cycle', arial, sans-serif;
 }
 
 #header h2 { 
@@ -214,6 +234,50 @@ ol li {
 	width: 100%;
 	padding: 0;
 	text-align: center;
+}
+
+/* Index page header: title | nav | year, nav truly centered regardless of side widths */
+.header-grid {
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	align-items: center;
+	column-gap: 1em;
+	width: 100%;
+}
+
+.header-grid .header-side {
+	white-space: nowrap;
+}
+
+.header-grid .header-side-left {
+	justify-self: start;
+}
+
+.header-grid .header-side-right {
+	justify-self: end;
+}
+
+.header-grid #main-nav {
+	justify-self: center;
+	width: auto;
+}
+
+.header-grid #main-nav ul {
+	margin: 0;
+}
+
+@media (max-width: 480px) {
+	.header-grid {
+		display: block;
+		text-align: center;
+	}
+
+	.header-grid .header-side,
+	.header-grid #main-nav {
+		display: block;
+		width: 100%;
+		justify-self: unset;
+	}
 }
 
 #main-nav ul {
