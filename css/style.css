@@ -208,9 +208,21 @@ ol li {
 		}
 
 
-#main-nav ul { 
+#main-nav {
+	float: none;
+	clear: both;
+	width: 100%;
+	padding: 0;
+	text-align: center;
+}
+
+#main-nav ul {
     font: normal 120% 'News Cycle', arial;
-	float: right;
+	float: none;
+	display: inline-block;
+	width: auto;
+	margin: 0.1em 0 1em 0;
+	text-align: center;
 	list-style: none;
 }
 
