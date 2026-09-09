@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Esri ArcGIS River Morphology</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 0 20px;
+}
+h1 {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+p {
+    margin-bottom: 20px;
+}
+
+/* --- Photo Row --- */
+.photo-row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    margin: 30px 0;
+}
+.photo-row img {
+    flex: 1 1 0;
+    min-width: 0;
+    width: 33.333%;
+    height: auto;
+    display: block;
+    margin: 0;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1 style="text-align: center;">Esri ArcGIS River Morphology</h1>
+
+    <p>
+    This project was inspired by Daniel Coe&rsquo;s GIS work that displays the innate beauty in patterns of change and geometries of nature through data visualization. The goal was to use geospatial data visualization to illustrate the morphology of the Mississippi river over time.
+    </p>
+
+    <p>
+    I used Esri ArcGIS Pro to transform Digital Elevation Models (DEMs) along the Red River in Oklahoma into a Relative Elevation Model (REM). The process involved developing a river centerline to establish the channel reference surface, using the Euclidean Distance and Inverse Distance Weighted interpolation tools to estimate river-surface elevation across the floodplain, and applying Raster Calculator operations to subtract the interpolated river-surface elevations from the original DEM. The resulting REM normalized the landscape relative to the river channel, allowing variations in floodplain elevation and geomorphic features to be more clearly visualized.
+    </p>
+
+    <div class="photo-row">
+        <img src="images/Screenshot 2026-09-09 at 11.14.10 AM.png" alt="Relative Elevation Model detail showing floodplain texture">
+        <img src="images/Screenshot 2026-09-09 at 11.14.03 AM.png" alt="Relative Elevation Model with river centerline highlighted">
+        <img src="images/Screenshot 2026-09-09 at 11.13.49 AM.png" alt="Relative Elevation Model detail showing river channel scars">
+    </div>
+</div>
+
+</body>
+</html>
